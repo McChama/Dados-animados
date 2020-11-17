@@ -1,0 +1,76 @@
+                                        /* Animaciones */
+.Banner{position: relative; visibility: hidden;}
+             
+/* Lanzamiento dados */
+    #cara img {width: 100px; height: 100px; border-radius: 15px;}
+    #Animacion-Dados .hero{top:20%;  border-radius: 10px;}
+
+    .Desvanecido{visibility: visible; animation: Desvanecido 5s forwards;}
+
+    .contenedor{perspective: 2000px; perspective-origin: 0px -700px; transition: 0.5s;}
+    .contenedor:hover{transform: scale(1.2)}
+
+    .cubo{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        transform-style: preserve-3d;  
+    }
+    .N1{visibility: visible; animation: N1 1s forwards;}
+    .N2{visibility: visible; animation: N2 1s forwards;}
+    .N3{visibility: visible; animation: N3 1s forwards;}
+    .N4{visibility: visible; animation: N4 1s forwards;}
+    .N5{visibility: visible; animation: N5 1s forwards;}
+    .N6{visibility: visible; animation: N6 1s forwards;}
+
+
+    .cara{position: absolute; width: 100%; height: 100%;}
+    #Cara1{ transform: translateZ(50px); } 
+    #Cara2{ transform: translateX(50px) rotateY(90deg); }
+    #Cara3{ transform: translateZ(-50px);}
+    #Cara4{ transform: translateX(-50px) rotateY(90deg);}
+    #Cara5{ transform: translateY(-50px) rotateX(90deg);}
+    #Cara6{ transform: translateY(50px) rotateX(90deg); }
+
+
+                                        /* Conjunto animaciones */
+/* Desvanecido del banner de los dados */
+    @keyframes Desvanecido{
+        0% {opacity: 0;}
+        20% {opacity: 1;}
+        80% {opacity: 1;}
+        100%{opacity: 0;}
+    }
+
+/* Lanzamiento dados */ 
+    @keyframes N1{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(540deg) rotateX(180deg);}
+    }
+    @keyframes N2{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(360deg) rotateX(90deg);}
+    }
+    @keyframes N3{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(90deg) rotateX(90deg);}
+    }
+    @keyframes N4{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(270deg) rotateX(180deg);}
+    }
+    @keyframes N5{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(360deg) rotateX(270deg);}
+    }
+    @keyframes N6{
+        0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}
+        50%{left: -25px; top: 100px;}
+        100%{left: 0px; top: 0px; transform: rotateY(180deg) rotateX(360deg);}
+    }
+
