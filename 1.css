@@ -5,8 +5,6 @@
     #cara img {width: 100px; height: 100px; border-radius: 15px;}
     #Animacion-Dados .hero{top:20%;  border-radius: 10px;}
 
-    .Desvanecido{visibility: visible; animation: Desvanecido 5s forwards;}
-
     .contenedor{perspective: 2000px; perspective-origin: 0px -700px; transition: 0.5s;}
     .contenedor:hover{transform: scale(1.2)}
 
@@ -34,14 +32,6 @@
 
 
                                         /* Conjunto animaciones */
-/* Desvanecido del banner de los dados */
-    @keyframes Desvanecido{
-        0% {opacity: 0;}
-        20% {opacity: 1;}
-        80% {opacity: 1;}
-        100%{opacity: 0;}
-    }
-
 /* Lanzamiento dados */ 
     @keyframes N1{
         0%{left: 100px; top: -200px; transform: rotateY(-360deg) rotateX(-180deg);}

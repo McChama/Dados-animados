@@ -22,6 +22,16 @@ function AnimacionDados(){
     const Dado1 = document.getElementById("Dado1");
     const Dado2 = document.getElementById("Dado2");
     
-    Dado1.className = 'cubo ' + CambiarResultadoDado(D1)
-    Dado2.className = 'cubo ' + CambiarResultadoDado(D2)
+    Dado1.className = '';
+    Dado2.className = '';
+    setTimeout(function(){
+        
+        Dado1.className = 'cubo ' + CambiarResultadoDado(D1);
+        Dado2.className = 'cubo ' + CambiarResultadoDado(D2);
+    },50)
+    
+
+    
+
+    
 }
