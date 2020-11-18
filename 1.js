@@ -1,11 +1,9 @@
-var D1;
-var D2;
-
 /* Calculo de los dados */
 function CalcularDados(){
-    D1 = parseInt(Math.random() * (6 - 0) + 1);
-    D2 = parseInt(Math.random() * (6 - 0) + 1);
-    alert("Dado 1: "+D1+" Dado 2: "+D2);
+    const D1 = parseInt(Math.random() * (6 - 0) + 1);
+    const D2 = parseInt(Math.random() * (6 - 0) + 1);
+    console.log(`Dado 1: ${D1} Dado 2: ${D2}`);
+    return { D1, D2 }
 }
 
 function CambiarResultadoDado(Dado){
@@ -20,18 +18,10 @@ function CambiarResultadoDado(Dado){
 }
 
 function AnimacionDados(){
-    CalcularDados();
-    var Desvanecido = document.getElementById("Animacion-Dados");
-    var Dado1 = document.getElementById("Dado1");
-    var Dado2 = document.getElementById("Dado2");
-
-    Desvanecido.classList.toggle("Desvanecido");
-    Dado1.classList.toggle(CambiarResultadoDado(D1));
-    Dado2.classList.toggle(CambiarResultadoDado(D2));
-
-    setTimeout(function(){
-        Desvanecido.classList.toggle("Desvanecido");
-        Dado1.classList.toggle(CambiarResultadoDado(D1));
-        Dado2.classList.toggle(CambiarResultadoDado(D2));
-    },5000);     
+    const { D1, D2 } = CalcularDados();
+    const Dado1 = document.getElementById("Dado1");
+    const Dado2 = document.getElementById("Dado2");
+    
+    Dado1.className = 'cubo ' + CambiarResultadoDado(D1)
+    Dado2.className = 'cubo ' + CambiarResultadoDado(D2)
 }
